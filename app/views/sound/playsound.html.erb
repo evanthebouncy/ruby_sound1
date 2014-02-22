@@ -1,2 +1,21 @@
 <h1>Sound#playsound</h1>
 <p>Find me in app/views/sound/playsound.html.erb</p>
+<audio id="player" autoplay="autoplay" controls="controls">
+<source src="https://s3-us-west-2.amazonaws.com/evanthebouncytest1/sound_sample1.m4a" />
+</audio>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$("#player").bind("ended", function(){
+    alert('Ended!');        
+});
+
+
+</script>
