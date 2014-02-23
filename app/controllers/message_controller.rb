@@ -13,7 +13,7 @@ class MessageController < ApplicationController
     name_resource_id = "rid"
     name_sender_name = "s"
 
-    message_to_send = "http://sheltered-gorge-7990.herokuapp.com/sound/playsound\
+    message_to_send = "http://digit4me.herokuapp.com/sound/playsound\
                        ?#{name_resource_id}=#{resource_id}\
                        &#{name_sender_name}=#{sender_name}"
 
