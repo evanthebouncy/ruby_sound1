@@ -1,7 +1,7 @@
 <h1>Sound#playsound</h1>
 <p><%= @sender_name %> has send you a messsage</p>
 <audio id="player" autoplay="autoplay" controls="controls">
-<source src="<%= @base_resource_path %><%= @resource_id %>.m4a" />
+<source src="<%= @resource_location %>" />
 </audio>
 
 
@@ -14,8 +14,9 @@
 
 <script type="text/javascript">
 var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
-if (iOS) {
-  window.location = "<%= @base_resource_path %><%= @resource_id %>.m4a"
+// if (iOS) {
+if (true) {
+  window.location = "<%= @resource_location %>"
 }
 
 $("#player").bind("ended", function(){
