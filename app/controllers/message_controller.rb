@@ -7,18 +7,15 @@ class MessageController < ApplicationController
 
   def send_text_message
     number_to_send_to = params[:number_to_send_to]
-    resource_id = params[:resource_id]
     sender_name = params[:sender_name]
- 
-    name_resource_id = "rid"
-    name_sender_name = "s"
+    resource_id = params[:resource_id]
 
+    # message to send has a pathing of <path>.com/sound/playsound/:sender_name/:resource_id
+ 
 #    message_to_send = "http://digit4me.herokuapp.com/sound/playsound\
 #                       ?#{name_resource_id}=#{resource_id}\
 #                       &#{name_sender_name}=#{sender_name}"
-    message_to_send = "http://ab.com/s/p\
-                       ?#{name_resource_id}=#{resource_id}\
-                       &#{name_sender_name}=#{sender_name}"
+    message_to_send = "http://digit4me.herokuapp.com/sound/playsound/#{sender_name}/#{resource_id}"
 
     # maybe okay to put it here, it is only usable locally anyways
     twilio_sid = "AC38bc1f90780d6fdb4e8bbeda30fe94b9"

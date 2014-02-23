@@ -1,6 +1,6 @@
 Sound1::Application.routes.draw do
   get "message/message_send"
-  get "sound/playsound"
+  get "sound/playsound/:sender_name/:resource_id", to: 'sound#playsound'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
