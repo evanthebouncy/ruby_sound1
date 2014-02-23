@@ -1,7 +1,7 @@
 <h1>Sound#playsound</h1>
 <p><%= @sender_name %> has send you a messsage</p>
 <audio id="player" autoplay="autoplay" controls="controls">
-<source src="https://digit4me.drinkchat.test1-voice.s3.amazonaws.com/<%= @resource_id %>.m4a" />
+<source src="<%= @base_resource_path %><%= @resource_id %>.m4a" />
 </audio>
 
 
@@ -15,7 +15,7 @@
 <script type="text/javascript">
 var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
 if (iOS) {
-  window.location = "https://s3-us-west-2.amazonaws.com/evanthebouncytest1/<%= @resource_id %>.m4a"
+  window.location = "<%= @base_resource_path %><%= @resource_id %>.m4a"
 }
 
 $("#player").bind("ended", function(){
