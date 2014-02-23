@@ -3,6 +3,9 @@ ruby '2.1.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.3'
+gem 'httpclient'
+gem 'twilio-ruby'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
